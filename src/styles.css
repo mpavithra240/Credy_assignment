@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.min.css';
+@import "~ngx-toastr/toastr.css";
+
+
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: 4mm;}
+mat-progress-bar .mat-progress-bar-buffer {
+    background: rgb(217, 245, 217);
+}
+
+mat-progress-bar .mat-progress-bar-fill::after{
+background: green;
+}
+hr {
+    border: none;
+    height: 20px;
+    width: 100%;
+    /* height: 50px; */
+    margin-top: -1rem;
+    /* margin-bottom: 2rem; */
+    border-bottom: 1px solid black;
+  }
+.hr1 {
+    margin-top: -6%;
+    width: 106%;
+    margin-left: -3%;
+    margin-bottom: 5%;
+}
+
+
+
+@media (min-width: 1200px)
+{
+  .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1820px;
+    /* margin-top: 2%; */
+    background: linear-gradient(to top left, #6baf99b8 3%, #94945ae6 92%) !important;
+  }
+}
+
+

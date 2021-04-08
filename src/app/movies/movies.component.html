@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="container">
+  <button class="button pull-right" cdkFocusInitial (click)="getAllData()">Refresh</button>
+  <br />
+
+
+
+  <div fxFlex="20" class=" grid-container">
+    <mat-card class="grid-item" *ngFor="let film of movieData" (click)="openDialog(film)" style="margin-top:10px; background-color: white;">
+      <mat-card-header (click)="openDialog(film)">
+        <mat-card-title>
+          <img src="https://ui-avatars.com/api/?size=40&name={{film.title}}&rounded=true" alt="Avatar">
+          {{film.title}}
+        </mat-card-title>
+
+      </mat-card-header>
+
+      <mat-card-content (click)="openDialog(film)" style=" margin-left: 9%;">
+        <p>
+          <b> Description :</b> {{film.shortDesc}}
+        </p>
+        <p>
+          <b> Genres :</b> {{film.genres}}
+
+        </p>
+
+      </mat-card-content>
+    </mat-card>
+
+    
+
+
+
+
+  </div>
+  <div style="text-align: center;
+  ">
+        <button class="buttonNext" *ngIf="previousBool">
+          <!-- *ngIf="previousBool"  -->
+          <mat-icon style="cursor: pointer;" matTooltip="Previous" (click)="getPrevious()">keyboard_arrow_left</mat-icon>
+        </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="buttonNext" *ngIf="nextBool">
+          <mat-icon style=" cursor: pointer;" matTooltip="Next" (click)="getNext()">keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+  <br /><br />
+
+
+</div>
